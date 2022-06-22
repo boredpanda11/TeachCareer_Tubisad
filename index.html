@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="tr">
 <!-- title-->
-<title>My One Page</title>
+<title>My page</title>
 <!-- favicon -->
 <link rel="icon" href="picture/favicon.jpg" />
 
@@ -17,8 +17,10 @@
 <meta name="author" content="Hamit Mızrak" />
 
 <!-- Google Fonts-->
-<link href="https://fonts.googleapis.com/css2?family=Crimson+Text&family=Quicksand:wght@300&display=swap"
-    rel="stylesheet">
+<!-- <link href="https://fonts.googleapis.com/css2?family=Crimson+Text&family=Quicksand:wght@300&display=swap"
+    rel="stylesheet"> -->
+<link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
 
 <!-- Font awesome-->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
@@ -37,24 +39,20 @@
 
 <!-- External JS -->
 <script src="template.js"></script>
-
-<style>
-    
-</style>
 </head>
 
-<body data-bs-spy="scroll" data-bs-target="#navBar" tabindex="0">
+<body data-bs-spy="scroll" data-bs-target="#navbar-example">
     <!-- navbar start -->
-       <!-- Navbar start -->
-       <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark" id="navBar">
+    <!-- Navbar start -->
+    <nav class="navbar fixed-top  navbar-expand-lg navbar-dark bg-dark">
         <!-- Container wrapper -->
-        <div class="container">
+        <div class="container" id="navbar-example">
             <!-- Navbar brand -->
             <div id="logo_div">
-            <a class="navbar-brand me-2" href="#" >
-                <img  src="//d9hhrg4mnvzow.cloudfront.net/www.techcareer.net/mainpage/en/57e21290-techcareer-logo-web_104600g000000000000028.png"
-                    height="16" alt="MDB Logo" loading="lazy" style="margin-top: -1px;" />
-            </a>
+                <a class="navbar-brand me-2" href="#">
+                    <img src="//d9hhrg4mnvzow.cloudfront.net/www.techcareer.net/mainpage/en/57e21290-techcareer-logo-web_104600g000000000000028.png"
+                        height="16" alt="MDB Logo" loading="lazy" style="margin-top: -1px;" />
+                </a>
             </div>
 
             <!-- Toggle button -->
@@ -68,7 +66,7 @@
                 <!-- Left links -->
                 <ul class="navbar-nav me-auto ms-5 mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link me-2" href="#special_aboutme"> <i class="fa-solid fa-desktop me-1"></i>About</a>
+                        <a class="nav-link me-2" href="#special_aboutme"> <i class="fa-solid fa-desktop"></i>About</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown"
@@ -84,8 +82,10 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#special_contact">Contact</a>
                     </li>
+
                 </ul>
-                <!-- Left links End -->
+                <!-- Left links -->
+
                 <div class="d-flex align-items-center">
                     <button data-bs-toggle="modal" data-bs-target="#modelId" type="button"
                         class="btn btn-link px-3 me-2">
@@ -104,77 +104,125 @@
         <!-- Container wrapper -->
     </nav>
     <!-- Navbar ends -->
+
     <!-- Button trigger modal -->
+
+
     <!-- Modal : Login -->
+    <!-- modal-login start -->
     <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title fw-bold"><i class="fa-solid fa-user-large me-1" style="color:#ffca04"></i>Login</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <h5 class="modal-title">Login</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <div class="input-group mb-1 row g-1">
-                        <div class="col">
-                            <input type="text" class="form-control" id="userName" name="userName" placeholder="Username">
+                    <form>
+                        <!-- Email input -->
+                        <div class="form-outline mb-4">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-1"> <label class="form-label" for="form2Example1">
+                                            <i class="fa-solid fa-envelope"></i>
+                                        </label></div>
+                                    <div class="col"> <input type="email" id="form2Example1" class="form-control" />
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col">
-                            <input type="password" class="form-control" id="password" name="password" placeholder="Password">
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer justify-content-center">
-                    <button type="button" class="btn btn-outline-warning w-50"><span class="fw-bold">Enter</span></button>
-                </div>
-            </div>
-        </div>
-    </div>
 
-   
-    
-    <!-- Modal : Register -->
-    <div class="modal fade" id="registerId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title fw-bold"><i class="fa-solid fa-address-card me-1" style="color: #0B5ED7;"></i>Register</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form action="#">
-                        <div class="row g-0 mb-1">
-                            <label for="email" class="col-form-label col-md-1"><i class="fa-solid fa-envelope"></i></label>
-                            <div class="col-md-11">
-                                <input type="email" class="form-control" placeholder="Email" id="email" name="email">
+                        <!-- Password input -->
+                        <div class="form-outline mb-4">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-1"> <label class="form-label" for="form2Example2">
+                                            <i class="fa-solid fa-key"></i>
+                                        </label></div>
+                                    <div class="col"> <input type="email" id="form2Example2" class="form-control" />
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="row g-0 mb-1">
-                            <label for="userName" class="col-form-label col-md-1"><i class="fa-solid fa-user"></i></label>
-                            <div class="col-md-11">
-                                <input type="text" class="form-control" placeholder="Username" id="userName" name="userName">
-                            </div>
+
+                        <div class="mt-2 mb-2">
+                            <button type="reset" class="btn btn-danger btn-block ">Temizle</button>
+                            <button type="submit" class="btn btn-primary btn-block ">Sign in</button>
                         </div>
-                        <div class="row g-0">
-                            <label for="password" class="col-form-label col-md-1"><i class="fa-solid fa-lock"></i></label>
-                            <div class="col-md-11">
-                                <input type="password" class="form-control" placeholder="Password" id="password" name="password">
+
+
+                        <!-- 2 column grid layout for inline styling -->
+                        <div class="row mb-4">
+                            <div class="col d-flex justify-content-center ">
+                                <!-- Checkbox -->
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="form2Example34"
+                                        checked />
+                                    <label class="form-check-label" for="form2Example34"> Remember me </label>
+                                </div>
                             </div>
+
+                            <div class="col">
+                                <a href="#!">Forgot password?</a>
+                            </div>
+
+                            <div class="col">
+                                <a href="#!">Register</a>
+                            </div>
+
+                        </div>
+
+
+                        <!-- Register buttons -->
+                        <div class="text-center">
+
+                            <button type="button" class="btn btn-primary btn-floating mx-1 rounded-circle">
+                                <i class="fab fa-facebook-f"></i>
+                            </button>
+
+                            <button type="button" class="btn btn-primary btn-floating mx-1 rounded-circle">
+                                <i class="fab fa-google"></i>
+                            </button>
+
+                            <button type="button" class="btn btn-primary btn-floating mx-1 rounded-circle">
+                                <i class="fab fa-twitter"></i>
+                            </button>
+
+                            <button type="button" class="btn btn-primary btn-floating mx-1 rounded-circle">
+                                <i class="fab fa-github"></i>
+                            </button>
                         </div>
                     </form>
                 </div>
-                <div class="modal-footer justify-content-center">
-                    <button type="button" class="btn btn-outline-primary w-50"><span class="fw-bold">Create</span></button>
+            </div>
+        </div>
+    </div>
+    <!-- modal-login ends -->
+
+
+    <!-- Modal Register -->
+    <div class="modal fade" id="registerId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Body
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save</button>
                 </div>
             </div>
         </div>
     </div>
-    
-    
-    
     <!-- navbar end -->
 
     <!-- header-start -->
-    <header>
+    <header id="header">
         <div class="jumbotron text-white">
             <div class="container" style="opacity:.9">
                 <div class="p-5 text-center">
@@ -188,146 +236,278 @@
     <!-- header-end -->
 
     <!-- main-start -->
-    
     <main>
-        <!-- Cards start-->
-        <div class="container my-4">
-            <div class="row mb-2" id="special_aboutme">
-                <div class="col">
-                    <div class="card text-center">
-                        <div class="card-header"><i class="fa-solid fa-award"></i></div>
-                        <div class="card-body">
-                            <h5 class="card-title">Award Me!</h5>
-                            <p class="card-text">Lorem ipsum dolor sit amet consectetur.</p>
-                            <a href="#" class="btn btn-outline-primary w-50">Give Award</a>
+        <!-- section-1 start -->
+        <section id="header_icon">
+            <div class="container" style="margin-top:3rem; margin-bottom:3rem;">
+                <p class="text-uppercase display-6 text-center">Ability</p>
+                <div class="row">
+                    <div class="col-md">
+                        <div class="card">
+                            <i class="fa-brands fa-html5 text-center"></i>
+                            <div class="card-body ">
+                                <h4 class="card-title text-uppercase text-center">Html</h4>
+                                <p class="card-text  line_clamp4">Html5 Lorem ipsum dolor sit amet Lorem ipsum dolor sit
+                                    amet.
+                                    consectetur adipisicing elit. Quae, fugiat.</p>
+                            </div>
                         </div>
-                        <div class="card-footer"># of awards</div>
                     </div>
-                </div>
-                <div class="col">
-                    <div class="card text-center">
-                        <div class="card-header"><i class="fa-solid fa-shield"></i></div>
-                        <div class="card-body">
-                            <h5 class="card-title">Shield Me!</h5>
-                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-                            <a href="#" class="btn btn-outline-warning w-50">Shield</a>
+                    <div class="col-md">
+                        <div class="card">
+                            <i class="fa-brands fa-css3 text-center text-primary"></i>
+                            <div class="card-body ">
+                                <h4 class="card-title text-uppercase text-center">css3</h4>
+                                <p class="card-text  line_clamp4">Css3 Lorem ipsum dolor sit amet consectetur Lorem
+                                    ipsum dolor
+                                    sit amet. adipisicing elit. Quae, fugiat.</p>
+                            </div>
                         </div>
-                        <div class="card-footer"># of shields</div>
                     </div>
-                </div>
-                <div class="col">
-                    <div class="card text-center">
-                        <div class="card-header"><i class="fa-solid fa-mug-hot"></i></div>
-                        <div class="card-body">
-                            <h5 class="card-title">A Cup of Coffee?</h5>
-                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-                            <a href="#" class="btn btn-outline-success w-50">Coffee!!</a>
+                    <div class="col-md">
+                        <div class="card">
+                            <i class="fa-brands fa-js text-center text-warning"></i>
+                            <div class="card-body ">
+                                <h4 class="card-title text-uppercase text-center">Javascript</h4>
+                                <p class="card-text  line_clamp4">JS Lorem ipsum dolor sit amet Lorem ipsum dolor sit
+                                    amet.
+                                    consectetur adipisicing elit. Quae, fugiat.</p>
+                            </div>
                         </div>
-                        <div class="card-footer"># of coffee mugs</div>
+                    </div>
+                    <div class="col-md">
+                        <div class="card">
+                            <i class="fa-solid fa-j text-center text-success"></i>
+                            <div class="card-body ">
+                                <h4 class="card-title text-uppercase text-center">jquery</h4>
+                                <p class="card-text  line_clamp4">Html5 Lorem ipsum dolor sit amet consectetur
+                                    adipisicing elit.
+                                    Quae, fugiat.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="row mb-2">
-                <div class="col-md-3 mb-2">
-                    <div class="card text-center">
-                        <div class="card-header"><i class="fa-solid fa-mug-hot"></i></div>
-                        <div class="card-body">
-                            <p class="card-title">card1</h5>
-                            <p class="card-text">Lorem, ipsum dolor.</p>
+        </section>
+        <!-- section-1 end -->
+
+
+        <!-- section-2 start -->
+        <section id="section_2">
+            <div class="container">
+                <div class="row">
+                    <p class="text-uppercase display-6 text-center">Blog</p>
+                    <div class="col-md-3">
+                        <div class="card">
+                            <img class="card-img-top" src="picture/coffee-g160fd41aa_1920.jpg" alt="Title">
+                            <div class="card-body">
+                                <h4 class="card-title">Title</h4>
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur elit.Doloremque cupiditate,
+                                    nemo itaque, aut reprehenderit repellendus quasi nesciunt velit molestiae possimus
+                                    quo. Dolores
+                                    perferendis a omnis dignissimos dolore praesentium doloremque repellat?
+                                    Tempora quasi similique corporis, accusamus officia voluptatem incidunt consequatur
+                                    enim ab
+                                    facere ea, vitae sapiente molestias ipsam totam aut consequuntur esse optio! Amet
+                                    sapiente
+                                    minima aspernatur, eveniet ex delectus nisi.</p>
+                            </div>
                         </div>
-                        <div class="card-footer">card footer</div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="card">
+                            <img class="card-img-top" src="picture/office-gc2455a673_1920.jpg" alt="Title">
+                            <div class="card-body">
+                                <h4 class="card-title">Title</h4>
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur elit.Doloremque cupiditate,
+                                    nemo itaque, aut reprehenderit repellendus quasi nesciunt velit molestiae possimus
+                                    quo. Dolores
+                                    perferendis a omnis dignissimos dolore praesentium doloremque repellat?
+                                    Tempora quasi similique corporis, accusamus officia voluptatem incidunt consequatur
+                                    enim ab
+                                    facere ea, vitae sapiente molestias ipsam totam aut consequuntur esse optio! Amet
+                                    sapiente
+                                    minima aspernatur, eveniet ex delectus </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="card">
+                            <img class="card-img-top" src="picture/meeting-g9a3aff941_1920.jpg" alt="Title">
+                            <div class="card-body">
+                                <h4 class="card-title">Title</h4>
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur elit.Doloremque cupiditate,
+                                    nemo itaque, aut reprehenderit repellendus quasi nesciunt velit molestiae possimus
+                                    quo. Dolores
+                                    perferendis a omnis dignissimos dolore praesentium doloremque repellat?
+                                    Tempora quasi similique corporis, accusamus officia voluptatem incidunt consequatur
+                                    enim ab
+                                    facere ea, vitae sapiente molestias ipsam totam aut consequuntur esse optio! Amet
+                                    sapiente
+                                    minima aspernatur, eveniet ex delectus </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card">
+                            <img class="card-img-top" src="picture/resim1.jpg" alt="Title">
+                            <div class="card-body">
+                                <h4 class="card-title">Title</h4>
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur elit.Doloremque cupiditate,
+                                    nemo itaque, aut reprehenderit repellendus quasi nesciunt velit molestiae possimus
+                                    quo. Dolores
+                                    perferendis a omnis dignissimos dolore praesentium doloremque repellat?
+                                    Tempora quasi similique corporis, accusamus officia voluptatem incidunt consequatur
+                                    enim ab
+                                    facere ea, vitae sapiente molestias ipsam totam aut consequuntur esse optio! Amet
+                                    sapiente
+                                    minima aspernatur, eveniet ex delectus </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="card">
+                            <img class="card-img-top" src="picture/resim1.jpg" alt="Title">
+                            <div class="card-body">
+                                <h4 class="card-title">Title</h4>
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur elit.Doloremque cupiditate,
+                                    nemo itaque, aut reprehenderit repellendus quasi nesciunt velit molestiae possimus
+                                    quo. Dolores
+                                    perferendis a omnis dignissimos dolore praesentium doloremque repellat?
+                                    Tempora quasi similique corporis, accusamus officia voluptatem incidunt consequatur
+                                    enim ab
+                                    facere ea, vitae sapiente molestias ipsam totam aut consequuntur esse optio! Amet
+                                    sapiente
+                                    minima aspernatur, eveniet ex delectus </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="card">
+                            <img class="card-img-top" src="picture/office-gc2455a673_1920.jpg" alt="Title">
+                            <div class="card-body">
+                                <h4 class="card-title">Title</h4>
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur elit.Doloremque cupiditate,
+                                    nemo itaque, aut reprehenderit repellendus quasi nesciunt velit molestiae possimus
+                                    quo. Dolores
+                                    perferendis a omnis dignissimos dolore praesentium doloremque repellat?
+                                    Tempora quasi similique corporis, accusamus officia voluptatem incidunt consequatur
+                                    enim ab
+                                    facere ea, vitae sapiente molestias ipsam totam aut consequuntur esse optio! Amet
+                                    sapiente
+                                    minima aspernatur, eveniet ex delectus </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="card">
+                            <img class="card-img-top" src="picture/meeting-g9a3aff941_1920.jpg" alt="Title">
+                            <div class="card-body">
+                                <h4 class="card-title">Title</h4>
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur elit.Doloremque cupiditate,
+                                    nemo itaque, aut reprehenderit repellendus quasi nesciunt velit molestiae possimus
+                                    quo. Dolores
+                                    perferendis a omnis dignissimos dolore praesentium doloremque repellat?
+                                    Tempora quasi similique corporis, accusamus officia voluptatem incidunt consequatur
+                                    enim ab
+                                    facere ea, vitae sapiente molestias ipsam totam aut consequuntur esse optio! Amet
+                                    sapiente
+                                    minima aspernatur, eveniet ex delectus </p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-3">
+                        <div class="card">
+                            <img class="card-img-top" src="picture/coffee-g160fd41aa_1920.jpg" alt="Title">
+                            <div class="card-body">
+                                <h4 class="card-title">Title</h4>
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur elit.Doloremque cupiditate,
+                                    nemo
+                                    itaque, aut reprehenderit repellendus quasi nesciunt velit molestiae possimus quo.
+                                    Dolores perferendis a
+                                    omnis dignissimos dolore praesentium doloremque repellat?
+                                    Tempora quasi similique corporis, accusamus officia voluptatem incidunt consequatur
+                                    enim ab facere ea,
+                                    vitae sapiente molestias ipsam totam aut consequuntur esse optio! Amet sapiente
+                                    minima aspernatur,
+                                    eveniet ex delectus </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-3 mb-2">
-                    <div class="card text-center">
-                        <div class="card-header"><i class="fa-solid fa-mug-hot"></i></div>
-                        <div class="card-body">
-                            <p class="card-title">card2</p>
-                            <p class="card-text">Lorem, ipsum dolor.</p>
+            </div>
+
+        </section>
+        <!-- section-2 end -->
+
+        <p id="special_aboutme">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, recusandae laudantium
+            exercitationem voluptates id fuga, ducimus quisquam nulla excepturi quas optio animi sunt ipsam. Molestias
+            quas consequatur sapiente magnam eveniet.
+            Exercitationem repellat incidunt laborum repudiandae mollitia voluptatum, maxime quaerat? Labore nostrum
+            culpa libero et rem illo, iure hic quam odio impedit repellendus, molestiae porro eos modi sequi ratione
+            nisi quasi?
+            Nesciunt accusamus debitis facilis, mollitia porro quasi in asperiores magnam, dolores nam vel quisquam
+            reiciendis aperiam ducimus totam officiis itaque assumenda voluptas omnis blanditiis ipsam necessitatibus
+            hic id doloribus. Perspiciatis.
+            Voluptas harum deleniti ratione ipsa dolor, eius magnam amet vel quas dolorum iure? Vitae repellat iusto
+            praesentium ut illo maxime quae! Libero, reprehenderit? Atque nam beatae rerum praesentium earum eum!</p>
+
+
+        <p id="special_contact">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere minus ratione molestiae
+            vitae nihil numquam eligendi fugit enim provident mollitia? Magni soluta obcaecati quae laborum quidem.
+            Voluptatum veritatis iure blanditiis.
+            Quo necessitatibus culpa distinctio, ratione cumque enim fugiat ipsum maxime quod perferendis amet inventore
+            quis est aspernatur, adipisci vitae tempora placeat, ipsa ipsam! Minus deserunt nihil fugiat. Blanditiis,
+            ipsum quo.
+        </p>
+
+        <div class="container my-3 border border" id="contact">
+            <p class="text-center fs-1">CONTACT</p>
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <form action="">
+                        <div class="row g-1 my-1">
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" placeholder="Name">
+                            </div>
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" placeholder="Surname">
+                            </div>
                         </div>
-                        <div class="card-footer">card footer</div>
-                    </div>
+                        <div class="row g-1 my-1">
+                            <div class="col-md-8">
+                                <input type="email" class="form-control" placeholder="Email">
+                            </div>
+                            <div class="col-md-4">
+                                <input type="text" class="form-control" pattern="[0-9]+" placeholder="Tel. Number">
+                            </div>
+                        </div>
+                        <div class="row g-1 my-1">
+                            <textarea name="message" id="message" cols="30" rows="10">...</textarea>
+                        </div>
+                        <div class="row g-1 my-1">
+                            <input type="submit" class="btn btn-warning" value="SEND">
+                        </div>
+                    </form>
                 </div>
-                <div class="col-md-3 mb-2">
-                    <div class="card text-center">
-                        <div class="card-header"><i class="fa-solid fa-mug-hot"></i></div>
-                        <div class="card-body">
-                            <p class="card-title">card3</p>
-                            <p class="card-text">Lorem ipsum dolor.</p>
-                        </div>
-                        <div class="card-footer">card footer</div>
-                    </div>
-                </div>
-                <div class="col-md-3 mb-2"><div class="card text-center">
-                        <div class="card-header"><i class="fa-solid fa-mug-hot"></i></div>
-                        <div class="card-body">
-                            <p class="card-title">card4</p>
-                            <p class="card-text">Lorem ipsum dolor.</p>
-                        </div>
-                        <div class="card-footer">card footer</div>
-                    </div>
-                </div>
-                <div class="col-md-3 mb-2"><div class="card text-center">
-                        <div class="card-header"><i class="fa-solid fa-mug-hot"></i></div>
-                        <div class="card-body">
-                            <p class="card-title">card5</p>
-                            <p class="card-text">Lorem ipsum dolor.</p>
-                        </div>
-                        <div class="card-footer">card footer</div>
-                    </div>
-                </div>
-                <div class="col-md-3 mb-2"><div class="card text-center">
-                        <div class="card-header"><i class="fa-solid fa-mug-hot"></i></div>
-                        <div class="card-body">
-                            <p class="card-title">card6</p>
-                            <p class="card-text">Lorem ipsum dolor.</p>
-                        </div>
-                        <div class="card-footer">card footer</div>
-                    </div>
-                </div>
-                <div class="col-md-3 mb-2"><div class="card text-center">
-                        <div class="card-header"><i class="fa-solid fa-mug-hot"></i></div>
-                        <div class="card-body">
-                            <p class="card-title">card7</p>
-                            <p class="card-text">Lorem ipsum dolor.</p>
-                        </div>
-                        <div class="card-footer">card footer</div>
-                    </div>
-                </div>
-                <div class="col-md-3 mb-2"><div class="card text-center">
-                        <div class="card-header"><i class="fa-solid fa-mug-hot"></i></div>
-                        <div class="card-body">
-                            <p class="card-title">card8</p>
-                            <p class="card-text">Lorem ipsum dolor.</p>
-                        </div>
-                        <div class="card-footer">card footer</div>
-                    </div>
+                <div class="col-md-6 p-2">
+                    <div id="map"></div>
                 </div>
             </div>
         </div>
-        <!-- Cards End -->
 
-    
-        <p id="special_ability">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere minus ratione molestiae vitae nihil numquam eligendi fugit enim provident mollitia? Magni soluta obcaecati quae laborum quidem. Voluptatum veritatis iure blanditiis.
-        Quo necessitatibus culpa distinctio, ratione cumque enim fugiat ipsum maxime quod perferendis amet inventore quis est aspernatur, adipisci vitae tempora placeat, ipsa ipsam! Minus deserunt nihil fugiat. Blanditiis, ipsum quo.
-        Ipsum dolor, perferendis commodi minima doloribus placeat asperiores animi, eius hic, quas dignissimos quia consequuntur est nesciunt eligendi repudiandae similique excepturi! Perspiciatis beatae fugiat reprehenderit quam! Quod earum velit sunt.
-        Delectus voluptatem similique vitae, ut, ullam iste provident minima aliquam commodi culpa facere eum totam dolore quod, accusantium ducimus odio fugiat inventore obcaecati possimus eligendi. In corporis illum magni reprehenderit?
-        Provident aut repellendus exercitationem recusandae? Explicabo minus enim tempora est libero? Distinctio vitae a ipsum at veritatis? Commodi nesciunt voluptas voluptate recusandae nulla soluta sint ratione! Laudantium distinctio reprehenderit quam.
-        Quis eligendi consectetur molestias provident architecto voluptatum harum neque saepe? Inventore voluptatem, fuga veritatis repellendus nam ea et magni aspernatur exercitationem dignissimos, amet temporibus facere qui architecto fugit voluptates voluptate.
-        Odio accusantium itaque mollitia labore sapiente sequi neque placeat, magnam numquam, maiores quibusdam a id pariatur doloremque atque explicabo est! Enim est fugiat atque architecto voluptatum dolor, ipsa a illo.
-        Quas enim doloribus, placeat officia cupiditate nemo! Sequi magnam et, alias voluptatum facere magni. Minus, fuga sint inventore soluta at mollitia consequatur maiores sapiente totam nam earum ab itaque odit.
-        Debitis non quos vel voluptate aliquid voluptatum nesciunt, quae officia sapiente eum sed pariatur impedit molestias exercitationem neque fugit nulla commodi minus illum ad aperiam, dicta nemo. Maiores, magni eius?
-        Soluta asperiores, adipisci saepe est eaque dolorem illum quis fugiat rerum repellat temporibus possimus! Laborum ex vero eligendi? Maxime necessitatibus soluta porro fuga, saepe sit. Et dicta maxime aperiam consectetur!
-        Dolor explicabo repellendus veritatis totam magnam excepturi animi, ipsam nobis. Dolorum maiores, a, unde, debitis pariatur in expedita quia mollitia magnam aut illo similique id itaque quo facere repellat numquam.
-        Incidunt repudiandae debitis saepe excepturi numquam, voluptates officiis inventore distinctio dignissimos laudantium delectus iste fugit nam perspiciatis optio alias aut non rerum aspernatur. Vel fugiat quibusdam nisi veritatis cupiditate in!
-        Repellendus obcaecati perferendis, omnis facilis voluptatem deserunt! Tempora aut nemo suscipit quam, nam earum corporis commodi dignissimos totam aliquam ratione, deleniti, harum ipsam quod! Dicta in accusamus repellat labore adipisci.
-        Facilis libero iusto suscipit culpa ab ratione vel neque. Error optio rerum voluptatem. Reiciendis mollitia consequuntur accusamus labore fuga, illum eaque maxime facilis voluptatibus sit ducimus repudiandae neque, quod et!
-        Fugiat fugit dolores autem. Et, vero. Dicta fugiat amet veritatis ratione quisquam provident. Atque suscipit quibusdam, fugiat necessitatibus iure iusto animi excepturi autem quaerat quas. Maiores porro quisquam fugiat hic?</p>
     </main>
     <!-- main-end -->
 
     <!-- footer-start -->
-    <footer class="text-center text-lg-start" id="special_contact">
+    <footer class="text-center text-lg-start">
 
         <!-- footer-tab-1 start -->
         <section id="section_footer_1" class="p-4 border-top d-flex justify-content-center justify-content-lg-between">
@@ -371,7 +551,8 @@
                         </h6>
                         <p style="text-align:left!important" class="line_clamp3">
                             E-Ticaret Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia veniam rerum ab
-                            explicabo temporibus tempora! Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis sit molestiae et veritatis voluptates iure.
+                            explicabo temporibus tempora! Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis
+                            sit molestiae et veritatis voluptates iure.
                         </p>
                     </div>
 
@@ -395,25 +576,27 @@
                     <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-5 shadow" id="address_id">
                         <h6 class="text-uppercase mb-3">Contact</h6>
                         <p><i class="fa-solid fa-earth-africa"></i> Turkey</p>
-                        <p><i class="fa-solid fa-envelope-open-text"></i>  
+                        <p><i class="fa-solid fa-envelope-open-text"></i>
                             <a href="mailto:hamitmizrak@gmail.com">hamitmizrak@gmail.com</a>
-                            </p>
+                        </p>
                         <p><i class="fa-solid fa-mobile-retro"></i>
-                            <a href="tel:90111223344">90 111 22 33 44</a>  </p>
-                            <p><i class="fa-solid fa-mobile-retro"></i>
-                                <a href="tel:90111223344">90 111 22 33 44</a>  </p>
+                            <a href="tel:90111223344">90 111 22 33 44</a>
+                        </p>
+                        <p><i class="fa-solid fa-mobile-retro"></i>
+                            <a href="tel:90111223344">90 111 22 33 44</a>
+                        </p>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-3">
-                        <button onclick="showDate()" class="btn btn-outline-secondary w-100">Show Date</button>
-                        <p id="dateHere"></p>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <button onclick="date()" class="btn btn-outline-danger">Date</button>
+                            <span id="date_id"></span>
+                        </div>
+
                     </div>
                 </div>
             </div>
         </section>
         <!-- footer-tab-2 end -->
-
         <!-- CopyRight -->
         <div class="text-center p-5 bg-dark" id="copy_right">
             &copy; ©2022 Copyright;
@@ -421,10 +604,17 @@
         </div>
     </footer>
     <!-- footer-end -->
+
+    <a id="back_top" href="#header" class="btn btn-warning btn-sm"><i
+            class="fa-solid fa-arrow-up-long text-light me-2"></i>TOP </a>
     
     <!-- Bootstrap JavaScript Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+    <script async
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBv2XI7NqIZOu8JLwjthbpofCBIF7j1DKg&callback=initMap">
+    </script>
+    <script src="./template.js"></script>    
 </body>
 
 </html>
